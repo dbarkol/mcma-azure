@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{6391DC34-EACB-4215-B11A-17E793200680}"
+	ProjectSection(SolutionItems) = preProject
+		services\readme.md = services\readme.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TransformService", "TransformService", "{E9BCE5A9-A0D0-4F03-9F14-5BB1E6DAF39D}"
 EndProject
