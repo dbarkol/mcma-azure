@@ -35,6 +35,3 @@ namespace Mcma.Azure.TransformService.Api
         }
     }
 }
-
-
-//[EventHub("%EventHubName%", Connection = "EventHubsConnectionString")] IAsyncCollector<Forecast> results,
