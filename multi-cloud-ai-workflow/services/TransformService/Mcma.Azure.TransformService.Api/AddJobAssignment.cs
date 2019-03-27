@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using Mcma.Common.Core.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
@@ -28,9 +29,16 @@ namespace Mcma.Azure.TransformService.Api
                 return new BadRequestObjectResult("Not a valid request");
             }
 
-            // Output to queue
-            await messages.AddAsync(requestBody);
+            // Create a job assignment request and send it to the 
+            // queue for further processing. 
+            var msg = new JobAssignmentRequest
+            {
+                ActionType = JobAssignmentRequestType.AddJobAssignment,
+                Details = requestBody
 
+            };
+            await messages.AddAsync(JsonConvert.SerializeObject(msg));
+            
             return (ActionResult)new OkObjectResult($"");
         }
     }

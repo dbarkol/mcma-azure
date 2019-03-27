@@ -8,6 +8,10 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.26" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\common\Mcma.Common.Core\Mcma.Common.Core.csproj" />
+    <ProjectReference Include="..\..\..\common\Mcma.Common.Repositories\Mcma.Common.Repositories.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
